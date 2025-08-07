@@ -1,0 +1,37 @@
+CREATE DATABASE ATIVIDADE;
+
+USE atividade;
+
+-- criando tabela
+CREATE TABLE atributos(
+id int primary key,
+titulo varchar(255),
+autor varchar(255),
+anopublicado int 
+);
+
+-- inserindo registro na tela
+insert into atributos(id,titulo,autor,anopublicado)values(1,'BELA ADORMECIDA','PEDR.OMAGAL',2008);
+insert into atributos(id,titulo,autor,anopublicado)values(2,'ROSA SAROM','STEVEN.MAGAL',1988);
+insert into atributos(id,titulo,autor,anopublicado)values(3,'PINOQUIO','FERNADINHO',1987);
+insert into atributos(id,titulo,autor,anopublicado)values(4,'MARCINHO','TH DA MARE',1987);
+insert into atributos(id,titulo,autor,anopublicado)values(5,'GOTINHA','BOPE',1987);
+
+
+-- consulta
+select*from atributos;
+select titulo, autor from atributos
+where id=2;
+
+-- update
+update atributos
+set anopublicado=2333
+where id=3;
+
+update atributos
+set titulo='LSH'
+where id=3;
+
+-- delete
+delete from atributos
+where id=2;

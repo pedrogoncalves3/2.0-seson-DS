@@ -1,0 +1,32 @@
+CREATE DATABASE ATVD ;
+
+USE ATVD ;
+
+create table funcionarios(
+id int primary key,
+nome varchar(255),
+cargo varchar(255),
+salario varchar(255)
+);
+
+insert into funcionarios(id,nome,cargo,salario)values(101,'Ana silva','Desenvolvedor J','3500.00');
+insert into funcionarios(id,nome,cargo,salario)values(102,'Carlos oliveira','Analista de Dados',5200.00);
+insert into funcionarios(id,nome,cargo,salario)values(103,'Juliana Santos','Gerernte de Projetos','8000.00');
+
+-- exibindo os funcionarios
+select*from funcionarios;
+
+update funcionarios
+set nome='Ana Silva'
+where id=101;
+
+update funcionarios
+set cargo='Desenvolvedor Pleno'
+where id=101;
+
+update funcionarios
+set salario='4800.00'
+where id=101;
+
+delete from funcionarios
+where id=102;

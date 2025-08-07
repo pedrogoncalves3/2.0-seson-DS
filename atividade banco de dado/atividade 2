@@ -1,0 +1,23 @@
+CREATE DATABASE ATVDD ;
+
+USE ATVDD ;
+
+create table produtos(
+id int primary key,
+nome varchar(255),
+preco varchar(255),
+estoque int
+);
+
+insert into produtos(id,nome,preco,estoque)values(1,'Notebook Gamer','5899.99',15);
+insert into produtos(id,nome,preco,estoque)values(2,'Mouse Sem Fio','129.50',50);
+insert into produtos(id,nome,preco,estoque)values(3,'Teclado Mecanico','450.00',25);
+
+select*from produtos;
+
+update produtos 
+set preco='145.90'
+where id=2;
+
+delete from produtos
+where id=3;
